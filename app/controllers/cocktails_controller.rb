@@ -5,6 +5,7 @@ class CocktailsController < ApplicationController
 
   def show
     @cocktail = Cocktail.find(params[:id])
+    # @ingredients = @cocktail.ingredient
   end
 
   def new
@@ -22,13 +23,3 @@ class CocktailsController < ApplicationController
 
 end
 
-# def create
-#     @restaurant = Restaurant.find(params[:restaurant_id])
-#     @review = Review.new(params.require(:review).permit(:content,:rating))
-#      @review.restaurant = @restaurant
-#      if @review.save
-#       redirect_to restaurant_path(@restaurant)
-#     else
-#       render :new
-#     end
-#   end
