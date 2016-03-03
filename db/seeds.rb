@@ -15,3 +15,12 @@ puts "creating new cocktails"
 10.times { Cocktail.create(name: "#{Faker::Name.name}" )}
 
 puts "Added 10 cocktails"
+
+Ingredient.create(name: "lemon")
+Ingredient.create(name: "ice")
+Ingredient.create(name: "mint leaves")
+Ingredient.create(name: "rum")
+Ingredient.create(name: "vodka")
+Ingredient.create(name: "coca-cola")
+
+puts "Now there are ingredients"
