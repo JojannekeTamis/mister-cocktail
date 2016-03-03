@@ -5,4 +5,6 @@ class Dose < ActiveRecord::Base
   validates :description, presence: true
   validates :cocktail, presence: true
   validates :ingredient, presence: true
+  # validates :description, :cocktail_id, :ingredient_id, presence: true
+  validates :ingredient_id, uniqueness: { scope: :cocktail_id }
 end

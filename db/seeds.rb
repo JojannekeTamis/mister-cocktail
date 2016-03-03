@@ -5,3 +5,13 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+puts "deleting all cocktails"
+
+Cocktail.delete_all
+
+puts "creating new cocktails"
+
+10.times { Cocktail.create(name: "#{Faker::Name.name}" )}
+
+puts "Added 10 cocktails"
