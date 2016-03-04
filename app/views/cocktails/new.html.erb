@@ -1,11 +1,15 @@
 <div class="col-sm-offset-1 col-sm-11">
 <h2>Add a new cocktail:<h2>
-<%= form_for(@cocktail) do |f| %>
-  <%= f.label :name %>
-  <%= f.text_field :name %>
 
+<%= simple_form_for(@cocktail) do |f| %>
+  <%= f.error_notification %>
+  <%= f.input :name %>
+  <%= f.input :photo %>
+  <%= f.input :photo_cache, as: :hidden %>
   <%= f.submit %>
 <% end %>
 
-<button type="button" class="btn btn-warning"><%= link_to "Back to the cocktail list", cocktails_path(@cocktail) %></button>
+
+<%= link_to "Back", cocktails_path(@cocktail), {class: "btn btn-primary" } %>
 </div>
+

@@ -1,4 +1,5 @@
-<div class="col-sm-offset-1 col-sm-11">
+<div class="container" style="width: 900px; margin: 0 auto;">
+<div class="col-xs-6">
 <h1> <%= @cocktail.name %></h1>
 
 <ul>
@@ -11,11 +12,12 @@
     <% end %>
 </ul>
 
-<button type="button" class="btn btn-success"><%= link_to "Add ingredient", new_cocktail_dose_path(@cocktail) %></button>
-<button type="button" class="btn btn-warning"><%= link_to "Back to the cocktail list", cocktails_path(@cocktail) %></button>
 
-
+<%= link_to "Add ingredient", new_cocktail_dose_path(@cocktail), {class: "btn btn-primary" } %>
+<%= link_to "Back", cocktails_path(@cocktail), {class: "btn btn-primary" } %>
+</div>
+<div class="col-xs-6">
+<%= cl_image_tag @cocktail.photo, height: 300, width: 400, crop: :fill %>
 
 </div>
-
-
+</div>

@@ -1,11 +1,12 @@
 <div class="col-sm-offset-1 col-sm-6">
 <h2>Add a new dose:</h2>
 <%= simple_form_for([@cocktail, @dose]) do |f| %>
+<%= f.error_notification %>
   <%= f.input :description %>
   <%= f.input :ingredient_id, as: :select, :collection => @ingredients %>
   <%= f.button  :submit%>
 <% end %>
 
-<button type="button" class="btn btn-warning"><%= link_to "Back to the cocktail list", cocktails_path(@cocktail) %></button>
+<%= link_to "Back", cocktails_path(@cocktail), {class: "btn btn-info" } %>
 </div>
 

@@ -12,17 +12,23 @@ Cocktail.delete_all
 
 puts "creating new cocktails"
 
-10.times { Cocktail.create(name: "#{Faker::Name.name}" )}
-# Cocktail.create!(name: "Mojito")
-# Cocktail.create!(name: "Martini")
-# Cocktail.create!(name: "Cosmopolitan")
-# Cocktail.create!(name: "Tequila Sunrise")
-# Cocktail.create!(name: "Mai Tai")
-# Cocktail.create!(name: "Manhattan")
-# Cocktail.create!(name: "Pina colada")
-# Cocktail.create!(name: "Margarita")
-# Cocktail.create!(name: "Black Russian")
-# Cocktail.create!(name: "Bloody Mary")
+# 10.times { Cocktail.create(name: "#{Faker::Name.name}" )}
+Cocktail.create!(name: "Mojito")
+Cocktail.create!(name: "Martini")
+Cocktail.create!(name: "Cosmopolitan")
+Cocktail.create!(name: "Tequila Sunrise")
+Cocktail.create!(name: "Mai Tai")
+Cocktail.create!(name: "Manhattan")
+Cocktail.create!(name: "Pina colada")
+Cocktail.create!(name: "Margarita")
+Cocktail.create!(name: "Black Russian")
+Cocktail.create!(name: "Bloody Mary")
+
+puts "Now there are cocktails"
+
+puts "deleting all ingredients"
+
+Ingredient.delete_all
 
 puts "Added 10 cocktails"
 

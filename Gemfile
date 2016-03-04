@@ -31,6 +31,8 @@ gem 'rails_12factor', group: :production
 gem 'puma',           group: :production
 gem 'faker'
 gem 'figaro'
+gem 'cloudinary'
+gem 'carrierwave'
 
 
 # Use ActiveModel has_secure_password
